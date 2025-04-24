@@ -1,4 +1,4 @@
-# Web Server Security Group (for EC2 / ALB)
+
 resource "aws_security_group" "web_sg" {
   name        = "web-sg"
   description = "Allow HTTP, HTTPS, and SSH"
@@ -40,7 +40,7 @@ resource "aws_security_group" "web_sg" {
   }
 }
 
-# Database Security Group (for RDS)
+
 resource "aws_security_group" "db_sg" {
   name        = "db-sg"
   description = "Allow MySQL/PostgreSQL from private subnets"
