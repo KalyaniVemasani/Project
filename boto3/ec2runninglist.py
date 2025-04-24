@@ -1,9 +1,9 @@
 import boto3
 
-# Create EC2 client
+
 ec2 = boto3.client('ec2')
 
-# Get info about instances with filter for running state
+
 response = ec2.describe_instances(
     Filters=[
         {
@@ -13,7 +13,7 @@ response = ec2.describe_instances(
     ]
 )
 
-# Print instance IDs and public IPs
+
 print(" Running EC2 Instances:\n")
 for reservation in response['Reservations']:
     for instance in reservation['Instances']:
